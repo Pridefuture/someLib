@@ -1,0 +1,34 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "pulseaudio", "battery", "temperature", "tray"],
+    "tray-position": "right",
+    "sway/mode": {
+        "format": "{}",
+        "format-alt": " {}"
+    },
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M:%S}",
+        "interval": 1
+    },
+    "network": {
+        "format-alt": "{}: {ipaddr} ({ifname})",
+        "interval": 60
+    },
+    "battery": {
+        "format": "{}",
+        "format-alt": "Battery: {capacity}%",
+        "interval": 30
+    },
+    "temperature": {
+        "format": "{temperatureC}°C",
+        "interval": 30
+    },
+    "tray": {
+        "icon-size": 16,
+        "show-passive": true,
+        "show-toggle": true
+    }
+}
