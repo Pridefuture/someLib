@@ -3,7 +3,7 @@
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["network", "pulseaudio", "battery", "temperature", "tray"],
+    "modules-right": ["network", "pulseaudio", "battery", "temperature", "custom/wifi", "custom/power", "tray"],
     "tray-position": "right",
     "sway/mode": {
         "format": "{}",
@@ -25,6 +25,18 @@
     "temperature": {
         "format": "{temperatureC}°C",
         "interval": 30
+    },
+    "custom/wifi": {
+        "exec": "nmcli -t -f WIFI g | grep enabled",
+        "return-type": "text",
+        "format": "",
+        "tooltip": false,
+        "onclick": "nm-connection-editor"
+    },
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "onclick": "wlogout"
     },
     "tray": {
         "icon-size": 16,
