@@ -1,0 +1,18 @@
+* {
+    font-family: "sans-serif";
+    font-size: 12px;
+    color: #ffffff;
+}
+
+window#waybar {
+    background: #333333;
+    border-bottom: 2px solid #444444;
+}
+
+#clock {
+    color: #ffffff;
+}
+
+#battery {
+    color: #ff0000;
+}
